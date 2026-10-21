@@ -1,5 +1,7 @@
 # LDCT synthesis benchmark: CycleGAN vs CUT vs VAE (piglet data)
 
+**Paper:** [PhysHVS-LDCT: Dose-Controllable Physics-Based Low-Dose CT Synthesis for Benchmarking and Data Augmentation](https://ieeexplore.ieee.org/document/11515637)
+
 The task is to learn **full-dose (100 %) → low-dose** CT for each target dose. All models are scored on the same held-out slices.
 
 Default setup: **FBP reconstruction, target doses 5 / 10 / 25 %**. Other doses and reconstructions (ASIR20/40/60, MBIR, 50 %) are available as command-line options.
@@ -175,3 +177,15 @@ Use the same `--iters` as your full model, otherwise the comparison is not fair.
 * **Sampler:** both diffusion models sample with DDIM "trailing" timestep spacing, so the first step is t = T−1 and matches the pure-noise start. The SD default ("leading") starts near t ≈ 960, which biases the generated brightness (Lin et al., WACV 2024).
 * **Classical DDPM:** `train_cddpm.py` diffuses the residual LDCT − NDCT by default (`--target residual`), so its HU values stay anchored to the NDCT. `--target image` gives the plain image-conditioned version.
 * **Optional low-frequency anchoring:** `--lf_anchor 4`, at sampling time, for both models. It keeps the generated noise and streaks but takes the low frequencies (σ = 4 px) from the NDCT. Results are saved as `cadm_lf` / `cddpm_lf`, so you can report them next to the raw outputs.
+
+## Citation
+If you use this code, please cite our paper:
+
+```bibtex
+@inproceedings{taifour2026physhvs,
+  title     = {PhysHVS-LDCT: Dose-Controllable Physics-Based Low-Dose CT Synthesis for Benchmarking and Data Augmentation},
+  author    = {Taifour, Y. and Tliba, M. and Aburaed, N. and Beghdadi, A. and Cheikh, F. A. and others},
+  booktitle = {2026 IEEE 23rd International Symposium on Biomedical Imaging (ISBI)},
+  year      = {2026}
+}
+```
