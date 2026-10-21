@@ -182,10 +182,14 @@ Use the same `--iters` as your full model, otherwise the comparison is not fair.
 If you use this code, please cite our paper:
 
 ```bibtex
-@inproceedings{taifour2026physhvs,
-  title     = {PhysHVS-LDCT: Dose-Controllable Physics-Based Low-Dose CT Synthesis for Benchmarking and Data Augmentation},
-  author    = {Taifour, Y. and Tliba, M. and Aburaed, N. and Beghdadi, A. and Cheikh, F. A. and others},
-  booktitle = {2026 IEEE 23rd International Symposium on Biomedical Imaging (ISBI)},
-  year      = {2026}
-}
+@INPROCEEDINGS{11515637,
+  author={Taifour, Yousra and Tliba, Marouane and Aburaed, Nour and Beghdadi, Azeddine and Cheikh, Faouzi Alaya and Chetouani, Aladine and Ming, Zuheng and Jennane, Rachid},
+  booktitle={2026 IEEE 23rd International Symposium on Biomedical Imaging (ISBI)}, 
+  title={PhysHVS-LDCT: Dose-Controllable Physics-Based Low-Dose CT Synthesis for Benchmarking and Data Augmentation}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-5},
+  keywords={Modeling;Noise;Equations;Printing;Physics;Conferences;Displays;Diffusion models;Indexes;Indexing;Low-dose CT (LDCT);physics-informed modeling;Human Visual System (HVS);image synthesis;generative modeling},
+  doi={10.1109/ISBI61048.2026.11515637}}
 ```
