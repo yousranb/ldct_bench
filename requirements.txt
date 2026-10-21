@@ -1,0 +1,14 @@
+torch
+pydicom
+scikit-image
+scipy
+pandas
+matplotlib
+lpips
+# diffusion models (train_cadm.py, train_cddpm.py); tested with diffusers 0.41, peft 0.21, transformers 5.19
+diffusers>=0.27
+peft>=0.10
+transformers>=4.38
+accelerate
+huggingface_hub
+piq
